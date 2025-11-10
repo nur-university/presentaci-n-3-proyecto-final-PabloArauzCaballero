@@ -1,0 +1,253 @@
+/* =============== */
+/*  Variables base */
+/* =============== */
+:root{
+  --gap: 28px;
+  --text: #0b0f19;
+  --muted:#5f6470;
+  --hover:#1d4ed8;
+  --bg:#fff;
+  --border:#e5e7eb;
+  --shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+*{ 
+  box-sizing: border-box; 
+}
+
+img{ 
+  max-width:100%; 
+  height:auto; 
+  display:block; 
+}
+
+a{ 
+  color:inherit; 
+  text-decoration:none; 
+}
+
+/*
+  position: Se utiliza 
+*/
+
+.base_site_header{
+  position: sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px; padding:12px 24px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.brand img{ height:56px; width:auto; }
+
+/* Nav contenedor */
+.primary-nav{ display:block; }
+
+/* Lista nivel 1 */
+.nav-list{
+  margin:0; padding:0; list-style:none;
+  display:flex; align-items:center; gap:var(--gap);
+}
+
+/* Items y resumen (título de dropdown) */
+.primary-nav__item{ position:relative; }
+
+/* Summary con caret “plomo” */
+.primary-nav__summary{
+  position: relative;
+  padding-right: 18px;
+  font: 500 15px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--text);
+  cursor:pointer;
+  list-style:none;
+}
+.primary-nav__summary::-webkit-details-marker{ display:none; }
+.primary-nav__summary:hover{ color:var(--hover); }
+
+.primary-nav__summary::after{
+  content:"";
+  position:absolute; right:0; top:50%;
+  width:0; height:0;
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:5px solid #6b7280; /* gris plomo */
+  transform: translateY(-40%);
+  pointer-events:none;
+  transition: transform .2s ease;
+}
+.primary-nav__details[open] > .primary-nav__summary::after{
+  transform: translateY(-60%) rotate(180deg);
+}
+
+/* Submenú (nivel 2) */
+.primary-nav__submenu{
+  display:none;
+  position:absolute; top: calc(100% + 10px); left:0;
+  min-width:240px;
+  background:#fff; border:1px solid var(--border); border-radius:10px;
+  box-shadow: var(--shadow);
+  padding:10px; margin:0; list-style:none;
+  z-index: 100;
+}
+
+/* “Piquito” que conecta el dropdown con el summary */
+.primary-nav__submenu::before{
+  content:"";
+  position:absolute; top:-7px; left:24px;
+  width:12px; height:12px;
+  background:#fff;
+  border-left:1px solid var(--border);
+  border-top:1px solid var(--border);
+  transform: rotate(45deg);
+  border-top-left-radius:2px;
+}
+
+.primary-nav__submenu a{
+  display:block; padding:10px 12px; border-radius:8px; color:var(--text);
+}
+.primary-nav__submenu a:hover{ background:#f3f4f6; color:var(--hover); }
+
+/* Mostrar submenú cuando <details> está abierto */
+.primary-nav__details[open] > .primary-nav__submenu{
+  display:grid; gap:4px;
+}
+
+/* CTA (Abrir mi cuenta) */
+.primary-nav__item--cta .btn-abrir-cuenta{
+  padding:10px 14px; border-radius:999px;
+  background:#111; color:#fff; font-weight:600;
+}
+.primary-nav__item--cta .btn-abrir-cuenta:hover{ background:#000; }
+
+/* Foco accesible */
+.primary-nav__summary:focus-visible,
+.primary-nav__submenu a:focus-visible,
+.primary-nav__item--cta .btn-abrir-cuenta:focus-visible{
+  outline:2px solid var(--hover); outline-offset:3px; border-radius:8px;
+}
+
+/* ===================== */
+/*  MAIN (hero/slider)   */
+/* ===================== */
+.hero{
+  background: linear-gradient(#e2e4fb, #ffffff);
+  padding: 60px 0 ;
+  width: 100%;
+}
+.slider{
+  width:100%;
+  margin: 0;
+  padding: 0;
+  position:relative;
+  overflow:hidden;
+  min-height: 300px;
+}
+.hero .badge{
+  display:inline-block; background:#3e7f5c; color:#fff;
+  padding:6px 10px; border-radius:10px; font-weight:700;
+}
+
+/* ====== HERO / SLIDE EN DOS COLUMNAS ====== */
+.slide{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;   /* más espacio para texto */
+  gap: 40px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.slide__content{
+  max-width: 720px;
+}
+
+.slide__title{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin: 2.75rem 0 2.75rem;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.slide__content{
+    margin: 0 0 1.75rem;
+}
+
+.slide__body {
+  margin: 0 0 1.85rem;
+}
+
+.slide__content p, li{
+  color: var(--muted);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+.slide__content ul{
+  margin: 0;
+}
+.slide__content li{ 
+  margin: .4rem 0; 
+}
+
+
+/* Botón */
+.btn{
+  display:inline-block;
+  background:#2a7a2e;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn:hover{ background:#256728; }
+
+/* Imagen a la derecha */
+.slide__media{
+  position: relative;
+}
+.slide__media img{
+  width: 100%;
+  height: clamp(240px, 38vw, 460px);
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.badge{
+  position:absolute;
+  bottom: 12px; left: 12px;
+  background:#3e7f5c; color:#fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight:700;
+  font-size: .95rem;
+}
+
+/* ===================== */
+/*  Responsive simple    */
+/* ===================== */
+@media (max-width: 900px){
+  .nav-list{ gap:16px; flex-wrap:wrap; }
+  .primary-nav__item{ width:auto; }
+
+  .primary-nav__submenu{
+    position:static; display:none; box-shadow:none; border:0; padding:6px 0;
+  }
+  .primary-nav__submenu::before{ display:none; }
+  .primary-nav__details[open] > .primary-nav__submenu{ display:grid; }
+
+  /* Hero responsive */
+  .slide{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: left;
+  }
+  .slide__media{ order: 2; }
+  .slide__content{ order: 1; margin-inline:auto; }
+}
+
+/* Reduce motion (accesibilidad) */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+}

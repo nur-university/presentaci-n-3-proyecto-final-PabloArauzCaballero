@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Producto/servicio de crowdfunding para personas naturales y empresas">
+        <meta property="og:title" content="WeFund (Crowdfunding)">
+        <meta property="og:description" content="Producto/servicio que simplifica el trabajo con esquemas y datos.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png">
+        <meta name="robots" content="index, follow">
+        <title>WeFund</title>
+        <link rel="icon" href="https://storage.googleapis.com/bucket_example_1000000001/ejemplo_1/FUNDING.png" type="image/x-icon">
+        
+        <link rel="stylesheet" href="./styles/global_styles.css">
+        <link rel="stylesheet" href="./styles/transitions.css">
+        <link rel="stylesheet" href="./styles/header_styles.css">
+        <link rel="stylesheet" href="./styles/login_signup_styles.css">
+        <link rel="stylesheet" href="./styles/contraller_styles.css">
+        <link rel="stylesheet" href="./styles/footer_styles.css">
+
+        <script src="https://kit.fontawesome.com/20f2f1746a.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header class="base_site_header" role="banner">
+            <nav class="primary-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <details>
+                        <summary class = "menu-toggle"><i class="fa-solid fa-house"></i></summary>
+                            <li id="soluciones-para-ti" class="primary-nav__item">
+                            <details class="primary-nav__details">
+                                <summary class="primary-nav__summary">Soluciones para ti</summary>
+                                <ul class="primary-nav__submenu">
+                                <li><a href="./campaign_info.html#WeHelp">Campaña WeHelp</a></li>
+                                <li><a href="./campaign_info.html#FundMyDream">Campaña FundMyDream</a></li>
+                                <li><a href="./campaign_info.html#WeSeed">Campaña WeSeed</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li id="soluciones-para-empresa" class="primary-nav__item">
+                            <details class="primary-nav__details">
+                                <summary class="primary-nav__summary">Soluciones para tu empresa</summary>
+                                <ul class="primary-nav__submenu">
+                                <li><a href="./campaign_info.html.html#BoostMyProject">Campaña BoostMyProject</a></li>
+                                <li><a href="./campaign_info.html#FundMyLaunch">Campaña FundMyLaunch</a></li>
+                                <li><a href="./campaign_info.html#WeBuild">Campaña WeBuild</a></li>
+                                <li><a href="./campaign_info.html#WeBack">Campaña WeBack</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li id="Sobre nosotros" class = "primary-nav__item">
+                            <details class = "primary-nav__details">
+                                <summary class="primary-nav__summary">Sobre nosotros</summary>
+                                <ul class = "primary-nav__submenu">
+                                    <li><a href = "#our_philosophy">Nuestra misión y visión</a></li>
+                                    <li><a href = "#contact_us">Información de contacto</a></li>
+                                    <li><a href = "./root_personas_naturales.html">Revisar campañas</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </details>
+                </ul> 
+            </nav>
+            <nav class="primary-nav-web-view" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li class="primary-nav__item logo-icon-header">
+                        <img src = "./styles/img/FUNDING.png">  
+                    </li>
+                    <li id="soluciones-para-ti" class="primary-nav__item">
+                        <details class="primary-nav__details transition_scaling_general">
+                        <summary class="primary-nav__summary">Soluciones para ti</summary>
+                        <ul class="primary-nav__submenu">
+                            <li><a href="./campaign_info.html#WeHelp">Campaña WeHelp</a></li>
+                            <li><a href="./campaign_info.html#FundMyDream">Campaña FundMyDream</a></li>
+                            <li><a href="./campaign_info.html#WeSeed">Campaña WeSeed</a></li>
+                        </ul>
+                        </details>
+                    </li>
+                                
+                    <li id="soluciones-para-empresa" class="primary-nav__item">
+                        <details class="primary-nav__details">
+                        <summary class="primary-nav__summary transition_scaling_general">Soluciones para tu empresa</summary>
+                        <ul class="primary-nav__submenu">
+                            <li><a href="./campaign_info.html#BoostMyProject">Campaña BoostMyProject</a></li>
+                            <li><a href="./campaign_info.html#FundMyLaunch">Campaña FundMyLaunch</a></li>
+                            <li><a href="./campaign_info.html#WeBuild">Campaña WeBuild</a></li>
+                            <li><a href="./campaign_info.html#WeBack">Campaña WeBack</a></li>
+                        </ul>
+                        </details>
+                    </li>
+
+                    <li id="Sobre nosotros" class = "primary-nav__item">
+                        <details class = "primary-nav__details">
+                        <summary class="primary-nav__summary transition_scaling_general">Sobre nosotros</summary>
+                        <ul class = "primary-nav__submenu">
+                            <li><a href = "#our_philosophy">Nuestra misión y visión</a></li>
+                            <li><a href = "#contact_us">Información de contacto</a></li>
+                            <li><a href = "./root_personas_naturales.html">Revisar campañas</a></li>
+                        </ul>
+                        </details>
+                    </li>
+                </details>
+            </nav>
+        </header>
+        <div class = "image_banner">
+            <img class = "transition_scaling_general" id = "we_fund_logo" src = "./styles/img/FUNDING.png">  
+        </div>
+        <aside class = "login_container">
+            <form id = "login_form">
+                <legend>Iniciar sesión</legend>
+                <div>
+                    <label for = "correo">Correo usuario:</label>
+                    <input name =  "correo" id = "correo" type="email" placeholder="Ingrese correo">
+                </div>
+                <div>
+                    <label for = "contrasena">Contraseña:</label>
+                    <input name =  "contrasena" id = "contrasena" type="password" placeholder="Ingrese contraseña">
+                </div>
+                <div class = "button_div">
+                    <button class = "transition_scaling_general" type = "button">Ingresar</button>
+                </div>
+            </form>
+            <div class = "new_account">
+                <p>¿No tienes cuenta?</p>
+                <a class = "transition_scaling_general" href = "root_personas_naturales.html">Create una</a>
+            </div>
+        </aside>
+    <footer>
+      <article>
+        <h1>Contacta con nosotros</h1>
+        <ul>
+          <li id = "telf">(+591) 77377232</li>
+          <li id = "correo">informaciones@wefund.com</li>
+          <li id = "perfil_facebook">https://WeFund.facebook.com</li>
+          <li id = "oficina">Mnz. 40 Torre 2, piso 21, Santa Cruz de la Sierra</li>
+        </ul>
+      </article>
+
+      <article>
+        <h1>Información</h1>
+        <ul>
+          <li id = "mision"><a href = "./index.html#what_is_a_campaign">¿Qué es una campaña?</a></li>
+          <li id = "vision"><a href= "./index.html#our_services">¿Qué puedes encontrar en WeFund?</a></li>
+          <li id = "tipos_campana"><a href= "./campaign_info.html">Tipos de campañas</a></li>
+        </ul>
+      </article>
+
+      <div class="final_footer">
+        <p>Sitio desarrollo por Pablo Arauz Caballero</p>
+        <p>@2025 FundMe Co.</p>
+        <div>
+          <a href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Privacidad</a>
+          <a href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Terminos y condiciones</a>
+        </div>
+      </div>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+.transition_scaling_general{
+    transform: scale(1) translateZ(0); 
+    transition: 
+        transform .28s cubic-bezier(.2,.8,.2,1),
+        filter .28s cubic-bezier(.2,.8,.2,1),
+        box-shadow .28s cubic-bezier(.2,.8,.2,1),
+        border-color .28s cubic-bezier(.2,.8,.2,1);
+}
+
+.transition_scaling_general:hover{
+    transform: scale(1.08);
+    filter: brightness(1.05) saturate(1.05);
+}
+
+.header_2_transition, .header_3_transition{
+    display: inline-block;
+    line-height: 1.1;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;     
+    background-size: 0 2px;          
+    transition: background-size .25s ease;  
+}
+
+.header_2_transition:hover, .header_2_transition:focus-visible,
+.header_3_transition:hover, .header_3_transition:focus-visible{
+    background-size: 100% 2px;
+}

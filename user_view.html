@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Producto/servicio de crowdfunding para personas naturales y empresas">
+        <meta property="og:title" content="WeFund (Crowdfunding)">
+        <meta property="og:description" content="Producto/servicio que simplifica el trabajo con esquemas y datos.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png">
+        <meta name="robots" content="index, follow">
+
+        <title>WeFund</title>
+    
+        <link rel="icon" href="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png" type="image/x-icon">
+        <link rel="stylesheet" href="./styles/global_styles.css">
+        <link rel="stylesheet" href="./styles/transitions.css">
+
+        <link rel="stylesheet" href="./styles/header_styles.css">
+
+        <link rel="stylesheet" href="./styles/login_signup_styles.css">
+        <link rel="stylesheet" href="./styles/contraller_styles.css">
+        <link rel="stylesheet" href="./styles/footer_styles.css">
+        <link rel="stylesheet" href="./styles/campaign_view.css">
+        <link rel = "stylesheet" href = "./styles/user_detail_view.css">
+        
+        <script src="https://kit.fontawesome.com/20f2f1746a.js" crossorigin="anonymous"></script>
+    </head> 
+    <body>
+        <header class="base_site_header" role="banner">
+            <nav class="primary-nav" aria-label="Navegación principal">
+                <div class="hamburger-down"> 
+                    <details class="hamburguer-nav_menu_container-mobile">
+                        <summary><i class="fa-solid fa-bars"></i></summary>
+                        <div class = "group-controls">
+                            <li><a href="#"><i class="fa-solid fa-plus"></i> Crear campaña</a></li>
+                            <li><a href="#"><i class="fa-solid fa-plus"></i> Crear recompensa</a></li>
+                            <li><a href="#"><i class="fa-solid fa-plus"></i> Crear entidad (empresa)</a></li>
+                        </div>
+                        <div class = "group-controls">
+                            <li><a><i class="fa-solid fa-magnifying-glass"></i> Crear campaña</a></li>
+                            <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear recompensa</a></li>
+                            <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear entidad (empresa)</a></li>
+                        </div>
+                        <div class = "group-controls">
+                            <li><a><i class="fa-solid fa-compass"></i>  WeHelp</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  FundMyDream</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  WeSeed</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  BoostMyProject</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  FundMyLaunch</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  WeBuild</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  WeBack</a></li>
+                        </div>
+                    </details>
+                </div>
+                <div id = "search-form">
+                    <form class = "search-form-form">
+                        <input type="text" placeholder="Ingrese nombre campaña">
+                        <button id = "retrieve-campaigns" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <div class = "campaign-filter-container transition_scaling_general">
+                            <i class="fa-solid fa-filter" id = "icon-campaign-filter"></i>
+                            <select id = "campaigns-filter">
+                                <option value ="we_help">WeHelp</option>
+                                <option value ="fund_my_dream">FundMyDream</option>
+                                <option value ="we_seed">WeSeed</option>
+                                <option value ="boost_my_projet">BoostMyProject</option>
+                                <option value ="fund_my_launch">FundMyLaunch</option>
+                                <option value ="we_build">WeBuild</option>
+                                <option value ="we_back">WeBack</option>
+                            </select>            
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <nav class="primary-nav-web-view" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <div class="hamburger-left">
+                        <input id="nav-toggle" class="nav-toggle" type="checkbox" hidden>
+
+                        <label for="nav-toggle" class="hamburger__button transition_scaling_general" aria-label="Abrir menú">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                    
+                        <label for="nav-toggle" class="backdrop"></label>
+
+                        <nav class="drawer" role="navigation" aria-label="Menú principal">
+                            <header class="drawer__header">
+                                <div class="primary-nav__item logo-icon-header transition_scaling_general">
+                                    <img src = "./styles/img/FUNDING.png">  
+                                </div>
+                                <label for="nav-toggle" class="drawer__close transition_scaling_general" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></label>
+                            </header>
+                        
+                            <ul class="hamburguer-nav_menu_container">
+                                <div class = "group-controls">
+                                    <li><a href="#"><i class="fa-solid fa-plus"></i> Crear campaña</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-plus"></i> Crear recompensa</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-plus"></i> Crear entidad (empresa)</a></li>
+                                </div>
+                                <div class = "group-controls">
+                                    <li><a><i class="fa-solid fa-magnifying-glass"></i> Crear campaña</a></li>
+                                    <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear recompensa</a></li>
+                                    <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear entidad (empresa)</a></li>
+                                </div>
+                                <div class = "group-controls">
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeHelp</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  FundMyDream</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeSeed</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  BoostMyProject</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  FundMyLaunch</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeBuild</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeBack</a></li>
+                                </div>
+                            </ul>
+                        </nav>
+                        <div class="primary-nav__item logo-icon-header transition_scaling_general">
+                            <img src = "./styles/img/FUNDING.png">  
+                        </div>
+                    </div>
+                    <li id = "search-form">
+                        <form class = "search-form-form">
+                            <input type="text" placeholder="Ingrese nombre campaña">
+                            <button id = "retrieve-campaigns" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <div class = "campaign-filter-container transition_scaling_general">
+                            <i class="fa-solid fa-filter" id = "icon-campaign-filter"></i>
+                            <select id = "campaigns-filter">
+                                <option value ="we_help">WeHelp</option>
+                                <option value ="fund_my_dream">FundMyDream</option>
+                                <option value ="we_seed">WeSeed</option>
+                                <option value ="boost_my_projet">BoostMyProject</option>
+                                <option value ="fund_my_launch">FundMyLaunch</option>
+                                <option value ="we_build">WeBuild</option>
+                                <option value ="we_back">WeBack</option>
+                            </select>            
+                            </div>
+                        </form>
+                    </li>
+                    <li class="header-controllers">
+                        <div class = "transition_scaling_general">
+                        <a  id = "login"  href = "./login.html">Ingresar</a>
+                        </div>
+                        <div class = "transition_scaling_general">
+                        <a id = "signup" href = "./singup.html">Registrarse</a>
+                        </div>
+                    </li>
+                </nav>
+        </header>
+        <div class = background-helper>
+            <main class = "generar_user-page_body">
+                <header class = "general_user_header">
+                    <div class = "general_user_header-banner">
+                        <img src = "./styles/img/pexels-anniroenkae-2832382.jpg">
+                    </div>
+                    <div class = "general_user_header-main_info">
+                        <div class = "general_user_header__main_info-main_title">
+                            <img class = "general_user_header__main_info-user_img transition_scaling_general" src = "styles/img/FUNDING.png">
+                            <h1 class="general_user_header__main_info-user_name header_2_transition">NOMBRE USUARIO</h1>
+                        </div>
+                        <div class = "general_user_header__main_info-kpi_user">
+                            <div>
+                                <h2 class = "general_user_header__main_info-kpi___user-icon transition_scaling_general"><i class="fa-solid fa-circle"></i></h2>
+                                <h2 class = "header_2_transition">12.05</h2>
+                            </div>
+                            
+                            <div>
+                                <h2 class = "general_user_header__main_info-kpi___user-icon transition_scaling_general"><i class="fa-solid fa-heart"></i></h2>
+                                <h2 class = "header_2_transition">185</h2>
+                            </div>
+
+                            <div>
+                                <h2 class = "general_user_header__main_info-kpi___user-icon transition_scaling_general"><i class="fa-solid fa-comments"></i></h2>
+                                <h2 class = "header_2_transition">300</h2>
+                            </div>                
+                            <div>
+                                <h2 class = "general_user_header__main_info-kpi___user-icon transition_scaling_general"><i class="fa-solid fa-medal"></i></h2>
+                                <h2 class = "header_2_transition">300</h2>
+                            </div>
+
+                            <div>
+                                <h2 class = "general_user_header__main_info-kpi___user-icon transition_scaling_general"><i class="fa-solid fa-circle-check"></i></h2>
+                                <h2 class = "header_2_transition">100%</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "general_user_header-detail">
+                        <h2 class = "general_user_header__detail-presentation header_2_transition">SUBTITULO - PRESENTACION</h2>
+                        <p class = "general_user_header__detail-presentation_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, laboriosam nostrum maiores dolorum eos exercitationem molestiae provident accusantium optio iusto facere. Vel beatae autem suscipit dicta exercitationem quasi neque fugit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nihil a harum. Expedita repellat alias saepe similique at minima et reiciendis atque, fugit obcaecati voluptas, doloribus deleniti nesciunt ullam inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam incidunt excepturi qui in ex culpa nihil iusto ut numquam magni, repellendus, ab nobis ratione, quas sed eligendi sit voluptatibus. Harum.</p>
+                    </div>
+
+                </header>
+                <article class = "campaign-article">
+                    <header class = "article-header header_2_transition">
+                        <h2 class = "article-header header_2_transition">NOMBRE DE LA CAMPAÑA</h2>
+                        <form class="part-2">
+                        <button class = "header-buttons" type="button"><i class="fa-solid fa-circle"></i></button>
+                        <h2 class = "header_2_transition">12.05</h2>
+                        <h2 id= "special-delimiter">|</h2>
+                        <button class = "header-buttons" type="button"><i class="fa-solid fa-heart"></i></button>
+                        <h2 class = "header_2_transition">185</h2>
+                        <h2 id= "special-delimiter">|</h2>
+                        <button class = "header-buttons" type="button"><i class="fa-solid fa-comments"></i></button>
+                        <h2 class = "header_2_transition">500</h2>
+                        <h2 id= "special-delimiter">|</h2>
+                        <button class = "header-buttons" type="button"><i class="fa-solid fa-user"></i></button>
+                        <h2 class = "header_2_transition">300</h2>
+                        <h2 id= "special-delimiter">|</h2>
+                        </form>
+                        <a class="transition_scaling_general" href="nom">Nombre usuario</a>
+                    </header>
+                    <main class = "campaign-main">
+                        <div class = "video">
+                        <iframe src = "https://www.youtube.com/embed/8hatQ0GNTZc"></iframe>
+                        </div>
+                        <div class = "content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quos iure dolorum nobis dolores necessitatibus dolor sapiente qui vitae, quod accusantium facilis ad nisi reprehenderit? Quae eaque harum aspernatur quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequatur architecto neque eligendi deleniti molestiae cupiditate numquam.
+                        </p>
+                        <div class = "advance-graph-layout">
+                            <div class = "advance-graph">
+                            <div class = "back-space"><p>.</p></div>
+                            <div class = "advance transition_scaling_general"><p>.</p></div>
+                            </div>
+                            <div class = "advance-legend">
+                            <p>5.1K $</p>
+                            </div>
+                        </div>
+                        <div class = "advance-graph-layout">
+                            <div class = "advance-graph">
+                            <div class = "back-space"><p>.</p></div>
+                            <div class = "advance-date transition_scaling_general"><p>.</p></div>
+                            </div>
+                            <div class = "advance-legend-date">
+                            <p>1/2/2025</p>
+                            <p>1/5/2025</p>
+                            </div>
+                        </div>
+                        <div class = "main-controls">
+                            <a href = "./login.html" class = "more_info transition_scaling_general"><i class="fa-solid fa-plus"></i>Saber más</a>
+                            <a href = "./login.html" class = "invest transition_scaling_general"><i class="fa-solid fa-coins"></i>Invertir</a>
+                        </div>
+                        </div>
+                    </main>
+                </article>
+            </main>   
+        </div>
+        <footer>
+            <article>
+                <h1>Contacta con nosotros</h1>
+                <ul>
+                    <li id = "telf">(+591) 77377232</li>
+                    <li id = "correo">informaciones@wefund.com</li>
+                    <li id = "perfil_facebook">https://WeFund.facebook.com</li>
+                    <li id = "oficina">Mnz. 40 Torre 2, piso 21, Santa Cruz de la Sierra</li>
+                </ul>
+            </article>
+
+            <article>
+                <h1>Información</h1>
+                <ul>
+                    <li class = "transition_scaling_general" id = "mision"><a href = "index.html">¿Qué es una campaña?</a></li>
+                    <li class = "transition_scaling_general" id = "vision"><a href= "index.html">¿Qué puedes encontrar en WeFund?</a></li>
+                    <li class = "transition_scaling_general" id = "tipos_campana"><a href= "index.html">Tipos de campañas</a></li>
+                </ul>
+            </article>
+
+            <div class="final_footer">
+                <p>Sitio desarrollo por Pablo Arauz Caballero</p>
+                <p>@2025 FundMe Co.</p>
+                <div>
+                    <a class = "transition_scaling_general" href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Privacidad</a>
+                    <a  class = "transition_scaling_general" href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Terminos y condiciones</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

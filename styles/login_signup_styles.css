@@ -1,0 +1,121 @@
+body{
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 0; padding: 0;
+}
+
+.login_container{
+  grid-area: 3/1;
+}
+
+.image_banner, .image_banner_signup{
+  position: relative;
+  display: grid; 
+  place-items: center;
+  min-height: 35svh;
+  overflow: hidden;        
+}
+
+.image_banner::before, .image_banner_signup::before{
+  content:"";
+  position:absolute;
+  inset: -100%;
+  z-index: 0;
+  animation: spin 45s linear infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.image_banner::before{
+  background: url("./img/c73002c45edfed4fa84df0d71cc92b79.jpg") center;
+}
+
+.image_banner_signup::before{
+    background: url("./img/banner_sigup.jpg") center;
+}
+
+@keyframes spin{    
+  to { transform: translatex(30%); }
+}
+
+#we_fund_logo{
+  position: relative;
+  z-index: 2;
+  width: min(40%, 300px);
+  border-radius: 50%;
+  border: 25px solid rgba(222,221,221,.5);
+  transform: scale(1) translateZ(0);  /* GPU */
+  transition: 
+    transform .28s cubic-bezier(.2,.8,.2,1),
+    filter .28s cubic-bezier(.2,.8,.2,1),
+    box-shadow .28s cubic-bezier(.2,.8,.2,1),
+    border-color .28s cubic-bezier(.2,.8,.2,1);
+}
+
+#we_fund_logo:hover{
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+  border-color: rgba(255, 255, 255, 0.65);
+  transform: scale(1.08);
+  filter: brightness(1.05) saturate(1.05);
+}
+
+.login_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#login_form{
+  width: 65%;
+  align-items: center;
+}
+
+#login_form, #login_form> *{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+}
+
+.button_div{
+  width: 100%;
+  place-items: center center;
+}
+
+.new_account , .conditions{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.new_account > a, .conditions > a{
+  color: #e07b17;
+  text-decoration: none;
+  font-weight: bold;
+  place-self: center center;
+}
+
+.conditions{
+  padding-bottom: 1rem;
+}
+
+@media(min-width: 978px){
+  body{
+    display: grid;
+    grid-template-columns: minmax(0, 65%) 1fr;
+    min-height: 120svh;
+    margin: 0; padding: 0;
+  }
+  .login_container{
+    grid-area: 2/2;
+  }
+
+  .image_banner, .image_banner_signup{
+    position: relative;
+    display: grid; 
+    place-items: center;
+    min-height: 100svh;
+    overflow: hidden;        
+  }
+
+}

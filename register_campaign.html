@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Producto/servicio de crowdfunding para personas naturales y empresas">
+        <meta property="og:title" content="WeFund (Crowdfunding)">
+        <meta property="og:description" content="Producto/servicio que simplifica el trabajo con esquemas y datos.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png">
+        <meta name="robots" content="index, follow">
+
+        <title>WeFund</title>
+        
+        <link rel="icon" href="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png" type="image/x-icon">
+        <link rel="stylesheet" href="./styles/global_styles.css">
+        <link rel="stylesheet" href="./styles/transitions.css">
+        <link rel="stylesheet" href="./styles/header_styles.css">
+        <link rel="stylesheet" href="./styles/contraller_styles.css">
+        <link rel="stylesheet" href="./styles/footer_styles.css">
+        <link rel="stylesheet" href= "./styles/register_styles.css">
+     
+        <script src="https://kit.fontawesome.com/20f2f1746a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="base_site_header" role="banner">
+            <nav class="primary-nav" aria-label="Navegación principal">
+                <div class="hamburger-down"> 
+                    <details class="hamburguer-nav_menu_container-mobile">
+                        <summary><i class="fa-solid fa-bars"></i></summary>
+                        <div class = "group-controls">
+                            <li><a href="#"><i class="fa-solid fa-plus"></i> Crear campaña</a></li>
+                            <li><a href="#"><i class="fa-solid fa-plus"></i> Crear recompensa</a></li>
+                            <li><a href="#"><i class="fa-solid fa-plus"></i> Crear entidad (empresa)</a></li>
+                        </div>
+                        <div class = "group-controls">
+                            <li><a><i class="fa-solid fa-magnifying-glass"></i> Crear campaña</a></li>
+                            <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear recompensa</a></li>
+                            <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear entidad (empresa)</a></li>
+                        </div>
+                        <div class = "group-controls">
+                            <li><a><i class="fa-solid fa-compass"></i>  WeHelp</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  FundMyDream</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  WeSeed</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  BoostMyProject</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  FundMyLaunch</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  WeBuild</a></li>
+                            <li><a><i class="fa-solid fa-compass"></i>  WeBack</a></li>
+                        </div>
+                    </details>
+                </div>
+                <div id = "search-form">
+                    <form class = "search-form-form">
+                        <input type="text" placeholder="Ingrese nombre campaña">
+                        <button id = "retrieve-campaigns" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <div class = "campaign-filter-container transition_scaling_general">
+                            <i class="fa-solid fa-filter" id = "icon-campaign-filter"></i>
+                            <select id = "campaigns-filter">
+                                <option value ="we_help">WeHelp</option>
+                                <option value ="fund_my_dream">FundMyDream</option>
+                                <option value ="we_seed">WeSeed</option>
+                                <option value ="boost_my_projet">BoostMyProject</option>
+                                <option value ="fund_my_launch">FundMyLaunch</option>
+                                <option value ="we_build">WeBuild</option>
+                                <option value ="we_back">WeBack</option>
+                            </select>            
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <nav class="primary-nav-web-view" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <div class="hamburger-left">
+                        <input id="nav-toggle" class="nav-toggle" type="checkbox" hidden>
+
+                        <label for="nav-toggle" class="hamburger__button transition_scaling_general" aria-label="Abrir menú">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                    
+                        <label for="nav-toggle" class="backdrop"></label>
+
+                        <nav class="drawer" role="navigation" aria-label="Menú principal">
+                            <header class="drawer__header">
+                                <div class="primary-nav__item logo-icon-header transition_scaling_general">
+                                    <img src = "./styles/img/FUNDING.png">  
+                                </div>
+                                <label for="nav-toggle" class="drawer__close transition_scaling_general" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></label>
+                            </header>
+                        
+                            <ul class="hamburguer-nav_menu_container">
+                                <div class = "group-controls">
+                                    <li><a href="#"><i class="fa-solid fa-plus"></i> Crear campaña</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-plus"></i> Crear recompensa</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-plus"></i> Crear entidad (empresa)</a></li>
+                                </div>
+                                <div class = "group-controls">
+                                    <li><a><i class="fa-solid fa-magnifying-glass"></i> Crear campaña</a></li>
+                                    <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear recompensa</a></li>
+                                    <li><a><i class="fa-solid fa-magnifying-glass-dollar"></i> Crear entidad (empresa)</a></li>
+                                </div>
+                                <div class = "group-controls">
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeHelp</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  FundMyDream</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeSeed</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  BoostMyProject</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  FundMyLaunch</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeBuild</a></li>
+                                    <li><a><i class="fa-solid fa-compass"></i>  WeBack</a></li>
+                                </div>
+                            </ul>
+                        </nav>
+                        <div class="primary-nav__item logo-icon-header transition_scaling_general">
+                            <img src = "./styles/img/FUNDING.png">  
+                        </div>
+                    </div>
+                    <li id = "search-form">
+                        <form class = "search-form-form">
+                            <input type="text" placeholder="Ingrese nombre campaña">
+                            <button id = "retrieve-campaigns" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <div class = "campaign-filter-container transition_scaling_general">
+                            <i class="fa-solid fa-filter" id = "icon-campaign-filter"></i>
+                            <select id = "campaigns-filter">
+                                <option value ="we_help">WeHelp</option>
+                                <option value ="fund_my_dream">FundMyDream</option>
+                                <option value ="we_seed">WeSeed</option>
+                                <option value ="boost_my_projet">BoostMyProject</option>
+                                <option value ="fund_my_launch">FundMyLaunch</option>
+                                <option value ="we_build">WeBuild</option>
+                                <option value ="we_back">WeBack</option>
+                            </select>            
+                            </div>
+                        </form>
+                    </li>
+                    <li class="header-controllers">
+                        <div class = "transition_scaling_general">
+                        <a  id = "login"  href = "./login.html">Ingresar</a>
+                        </div>
+                        <div class = "transition_scaling_general">
+                        <a id = "signup" href = "./singup.html">Registrarse</a>
+                        </div>
+                    </li>
+                </nav>
+        </header>
+        <div class = background-helper>
+            <main class = "register_campaign-page_body">
+                <header class = "main_form_header">
+                    <h1>CREAR CAMPAÑA</h1>
+                </header>
+                <form class = "main_form">
+                    <div class = "first_column">
+                        <div>
+                            <label for = "campaign_title">Titulo de la campaña:</label>
+                            <input type="text" id = "campaign_title" name ="campaign_title">
+                        </div>
+                        
+                        <div>
+                            <label for = "link_youtube_campaign_video">Link video youtube:</label>
+                            <input type="text" id = "link_youtube_campaign_video" name = "link_youtube_campaign_video">
+                        </div>
+
+                        <div>
+                            <label for = "short_description">Descripción corta:</label>
+                            <input type="text" id = "short_description" name = "short_description">
+                        </div>
+
+                        <div>
+                            <label for = "amount">Monto solicitado:</label>
+                            <input type="text" id = "amount" name = "amount">
+                        </div>
+                    </div>
+                    <div class = "second_column">
+                        <div>
+                            <label for = "category">Cateogría:</label>
+                            <select id = "category" name = "category"></select>
+                        </div>
+                        
+                        <div>
+                            <label for = "campaign_type">Tipo campaña:</label>
+                            <select id = "campaign_type" name = "campaign_type"></select>
+                        </div>
+
+                        <div>
+                            <label for = "beneficiary">Beneficiario:</label>
+                            <select id = "beneficiary" name = "beneficiary"></select>
+                        </div>
+
+                        <div>
+                            <label for = "time_required">Tiempo requerido (meses):</label>
+                            <select id = "time_required" name ="time_required"></select>
+                        </div>
+                    </div>
+                    <div class = "third_column">
+                        <div>
+                            <label for = "large_description">Descripción (larga):</label>
+                            <textarea placeholder="Ingree descripcion"></textarea>
+                        </div>
+
+                        <div>
+                            <label for = "amount_reward">Recompensa:</label>
+                            <div>
+                                <input type = "text" id = "amount_reward" placeholder="Cantidad">
+                                <select></select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for = "amount_money">Equivale a:</label>
+                            <input type="text" id = "amount_money" placeholder="Monto">
+                        </div>
+                    </div>
+                    <div id = "other_requirements">
+                        <header><h2>Requerimientos:</h2></header>
+                        <div class = "requeriment_doc_container">
+                            <h3>Doc.1:</h3>
+                            <div class = "specialist_button transition_scaling_general" href = "campaign_info.html"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        </div>
+                        <div class = "requeriment_doc_container">
+                            <h3>Doc.2:</h3>
+                            <div class = "specialist_button transition_scaling_general" href = "campaign_info.html"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        </div>
+                        <div class = "requeriment_doc_container">
+                            <h3>Doc.3:</h3>
+                            <div class = "specialist_button transition_scaling_general" href = "campaign_info.html"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        </div>
+
+                        <div class = "requeriment_doc_container">
+                            <h3>Doc.1:</h3>
+                            <div class = "specialist_button transition_scaling_general" href = "campaign_info.html"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        </div>
+                        <div class = "requeriment_doc_container">
+                            <h3>Doc.2:</h3>
+                            <div class = "specialist_button transition_scaling_general" href = "campaign_info.html"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        </div>
+                        <div class = "requeriment_doc_container">
+                            <h3>Doc.3:</h3>
+                            <div class = "specialist_button transition_scaling_general" href = "campaign_info.html"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        </div>
+                        <div class = "requeriment_doc_container">
+                            <h3>Doc.3:</h3>
+                            <div class = "specialist_button transition_scaling_general" href = "campaign_info.html"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <footer>
+            <article>
+                <h1>Contacta con nosotros</h1>
+                <ul>
+                    <li id = "telf">(+591) 77377232</li>
+                    <li id = "correo">informaciones@wefund.com</li>
+                    <li id = "perfil_facebook">https://WeFund.facebook.com</li>
+                    <li id = "oficina">Mnz. 40 Torre 2, piso 21, Santa Cruz de la Sierra</li>
+                </ul>
+            </article>
+
+            <article>
+                <h1>Información</h1>
+                <ul>
+                    <li class = "transition_scaling_general" id = "mision"><a href = "index.html">¿Qué es una campaña?</a></li>
+                    <li class = "transition_scaling_general" id = "vision"><a href= "index.html">¿Qué puedes encontrar en WeFund?</a></li>
+                    <li class = "transition_scaling_general" id = "tipos_campana"><a href= "index.html">Tipos de campañas</a></li>
+                </ul>
+            </article>
+
+            <div class="final_footer">
+                <p>Sitio desarrollo por Pablo Arauz Caballero</p>
+                <p>@2025 FundMe Co.</p>
+                <div>
+                    <a class = "transition_scaling_general" href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Privacidad</a>
+                    <a class = "transition_scaling_general" href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Terminos y condiciones</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
