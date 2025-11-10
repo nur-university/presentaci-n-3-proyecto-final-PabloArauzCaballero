@@ -1,0 +1,514 @@
+@media (max-width: 780px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .main_body{
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lobby_banner{  
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;    
+        
+    }
+
+    .img-lobby_banner > *{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        
+    .img-lobby_banner{
+        width: 100%; 
+        height: 38rem;
+        overflow: hidden;
+
+    }
+
+    .lobby_banner > * {
+        grid-area: 1 /1;
+    }
+
+    .title-banner{
+        background-color: rgba(0, 0, 0, 0.795);
+        position: absolute;
+        z-index: 99999;
+        color: white;
+        width: 20rem;
+        height: 25rem;
+            
+        border-radius: 7%;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-self: center center;
+    }
+
+    .title-banner > h1{
+        font-size: 2.2rem;
+        padding: 1rem 2rem;
+        margin: 0;
+        font-weight: 900;
+    }
+
+    .title-banner > p{
+        font-size: 1.2rem;
+        padding: 0 2rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .title-banner > div{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        place-self: center center;
+        column-gap: 5px;
+    }
+
+    .login-btn, .sign-up{
+        width: 100%;
+        place-self: center center;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        font-weight: 900;
+    }
+
+    .login-btn{
+        background-color: rgb(125, 125, 125);
+    }
+
+    .sign-up{
+        background-color: #e07b18;
+    }
+
+
+    .general_header{
+        display: grid;
+        grid-template-columns: 1fr;
+        color: white;
+        padding: 4%;
+        background:
+            radial-gradient(100% 250px at bottom left,rgba(135, 135, 135, 0.75), transparent 100%),
+            radial-gradient(100% 250px at bottom right,rgba(138, 137, 137, 0.75), transparent 70%),
+            rgba(0, 0, 0, 0.885);
+        border-bottom: 0.5px solid rgba(148, 148, 148, 0.28);
+    }
+
+    .general_header > div > ul *, .general_header > div > div > p, .general_header > div > p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .general_header > div > h2{
+        width: 100%;
+        font-weight: 900;    
+        font-size: 50px;
+        background-color: #e07b18;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .general_header > div > h3, .general_header > div > ul, .general_header > div > div > h3, .general_header > div > div > p{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .general_header > div {
+        padding: 0 3rem;
+    }
+
+    .general_header > div > ul *, .general_header > div > div > p, .general_header > div > p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .general_header > div > h2{
+        font-weight: 900;    
+        font-size: 40px;
+    }
+
+    .general_header > div > h3, .general_header > div > div > h3{
+        font-weight: 900;    
+        font-size: 20px;
+    }
+
+    .general_header > div > ul{
+        padding-bottom: 2rem; padding-top: 2rem;
+    }    
+
+    .general_header > div > ul, .general_header > div > div > p, .general_header > div > p{
+        background-color: rgb(55, 55, 55);
+    }
+
+    .general_header > div > div > p, .general_header > div > p{
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .general_header > div > h3, .general_header > div > div > h3{
+        padding: 1rem;
+        font-weight: 900;    
+        font-size: 20px;
+        background-color: rgb(96, 96, 96);
+    }   
+
+    .about_us-img_container > div {
+        display: none;
+    }
+
+    .about_us-img_container > *, 
+    .our_philosophy-image > *, 
+    .our_philosophy-image > div > *,
+    .we_fund-img_container > *, 
+    .we_fund-img_container > div  > *,
+    .we_help-img_container > *, 
+    .we_help-img_container > div > *,
+    .we_seed-img_container > *,
+    .we_seed-img_container > div > *{
+        max-width: 100%;
+        height: auto;
+        place-self: center center;
+        border-radius: 5%;
+    }
+
+    .about_us-img_container, .we_fund-img_container, .we_help-img_container, .we_seed-img_container{
+        position: relative;           
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0;    
+        place-items: center;
+        overflow: hidden;
+    }
+
+
+    .our_services-title {
+        grid-column: span 9999;
+    }
+
+    .contact_us{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        align-items: center;
+        padding: 4%;
+    }
+
+    #WeFund > .we_fund-img_container{
+        grid-area: 2/1;
+    }
+
+    #our_services-title, #contact_us-message, legend, #button-contact_us-container, .contact_us div{
+        grid-column: span 2;
+    }
+        
+    #button-contact_us-container > *{
+        width: 100%;
+    }
+
+    .contact_us div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #our_services{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 780px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .main_body{
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-lobby_banner > image{
+        z-index: 0;
+    }
+
+    .lobby_banner{  
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .lobby_banner > * {
+        grid-area: 1 /1;
+    }
+
+    .img-lobby_banner, .img-lobby_banner > *{
+        width: 100%; 
+        height: 42rem;
+    }
+
+    .title-banner{
+        background-color: rgba(0, 0, 0, 0.795);
+        position: absolute;
+        z-index: 99999;
+        color: white;
+        width: 575px;
+        
+        border-radius: 7%;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-self: center end;
+        transform:translateX(-10%);
+    }
+
+    .title-banner > h1{
+        font-size: 65px;
+        padding: 1rem 2rem;
+        margin: 0;
+        font-weight: 900;
+    }
+
+    .title-banner > p{
+        font-size: 35px;
+        padding: 0 2rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .title-banner > div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 30%;
+        place-self: center center;
+        column-gap: 5px;
+    }
+
+    .login-btn, .sign-up{
+        place-self: center center;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        font-weight: 900;
+    }
+
+    .login-btn{
+        background-color: rgb(125, 125, 125);
+    }
+
+    .sign-up{
+        background-color: #e07b18;
+    }
+
+    .general_header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        color: white;
+        padding: 4%;
+        background:
+            radial-gradient(100% 50px at bottom left,rgba(135, 135, 135, 0.455), transparent 70%),
+            radial-gradient(100% 50px at bottom right,rgba(138, 137, 137, 0.455), transparent 70%),
+            rgba(0, 0, 0, 0.885);  
+    }
+
+    #our_services{
+        background:
+            radial-gradient(75% 350px at bottom left,rgba(135, 135, 135, 0.455), transparent 70%),
+            rgba(0, 0, 0, 0.885);
+    }
+
+    .general_header > div {
+        padding: 0 3rem;
+    }
+
+    .general_header > div > ul *, .general_header > div > div > p, .general_header > div > p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .general_header > div > h2{
+        width: 100%;
+        font-weight: 900;    
+        font-size: 50px;
+        background-color: #e07b18;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .general_header > div > h3, .general_header > div > ul, .general_header > div > div > h3, .general_header > div > div > p{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .about_us-img_container, .what_is_a_campaign{
+        position: relative;           
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0;    
+        place-items: center;
+        overflow: hidden;
+    }
+
+    .we_fund-img_container, .we_help-img_container, .we_seed-img_container, .boost_my_project-img_container, .fund_my_launch-img_container, .we_build-img_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center center;
+    }
+    
+    .our_philosophy-image{
+        position: relative;           
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: center center;
+    }
+
+    #about_us, #our_philosophy{
+        position: relative;
+        overflow: hidden;  
+    }
+
+
+    .about_us-img_container > *, 
+    .about_us-img_container > div > *, 
+    .our_philosophy-image > *,
+    .we_fund-img_container > *,
+    .we_help-img_container > *,
+    .we_seed-img_container > *,
+    .boost_my_project-img_container > *,
+    .fund_my_launch-img_container > *,
+    .we_build-img_container > *,
+    .what_is_a_campaign > div > *
+    {
+        max-width: 100%;
+        border-radius: 15px;
+        height: auto;
+        z-index: 999999;
+    }
+
+    .general_header > div > ul{
+        padding-bottom: 2rem; padding-top: 2rem;
+    }
+    
+    .general_header > div > ul, .general_header > div > div > p, .general_header > div > p{
+        background-color: rgb(55, 55, 55);
+    }
+
+    .general_header > div > div > p, .general_header > div > p{
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .general_header > div > h3, .general_header > div > div > h3{
+        padding: 1rem;
+        font-weight: 900;    
+        font-size: 20px;
+        background-color: rgb(96, 96, 96);
+    }
+    
+    .about_us-img_container{
+        position: relative;           
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0;    
+        place-items: center;
+        overflow: hidden;
+    }
+    
+    .our_philosophy-image{
+        position: relative;           
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: center center;
+    }
+
+    #about_us, #our_philosophy{
+        position: relative;
+        overflow: hidden;  
+    }
+
+    .about_us-img_container > div > *, 
+    .our_philosophy-image > *,
+    .we_fund-img_container > *,
+    .we_fund-img_container > div > *,
+    .we_help-img_container > *,
+    .we_help-img_container > div > *, 
+    .we_seed-img_container > *,
+    .we_seed-img_container > div > *,
+    .what_is_a_campaign-img_container > div > *{
+        max-width: 100%;
+        height: auto;
+        place-self: center center;
+        z-index: 999999;
+        border-radius: 15px;
+    }
+    
+    .our_services-title {
+        grid-column: span 9999;
+    }
+
+    .contact_us{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        align-items: center;
+        padding: 4%;
+    }
+
+    #contact_us-message{
+        grid-column: span 2;
+    }
+    
+    .contact_us div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 1000px){
+    .about_us-img_container, .we_fund-img_container, .we_help-img_container, .we_seed-img_container{
+        position: relative;
+        margin: 0; 
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap:0;
+        overflow: hidden;
+    }
+
+    .about_us-img_container > *, 
+    .about_us-img_container > div > *, 
+    .our_philosophy-image > *,
+    .about_us-img_container > div > *,
+    .we_fund-img_container > *,
+    .we_fund-img_container > div > *,
+    .we_help-img_container > *,
+    .we_seed-img_container > *,
+    .we_seed-img_container > div > *,
+    .what_is_a_campaign-img_container > *,
+    .what_is_a_campaign-img_container > div > *{
+        max-width: 100%;
+        margin-top: 1rem; padding: 0;
+        align-items: center;
+        z-index: 999;
+        border-radius: 15px;
+    }
+}

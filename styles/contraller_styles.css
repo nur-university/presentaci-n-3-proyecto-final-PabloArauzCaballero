@@ -1,0 +1,55 @@
+textarea, input, select{
+    padding: 0.7rem;
+    border: none;
+    background-color: rgba(222,221,221,.5);
+}
+
+button{
+    margin-top: 1rem;
+    width: 35%;
+    padding: 0.7rem;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 75%;
+}
+
+button{
+    transform: scale(1) translateZ(0); 
+    transition: 
+        transform .28s cubic-bezier(.2,.8,.2,1),
+        filter .28s cubic-bezier(.2,.8,.2,1),
+        box-shadow .28s cubic-bezier(.2,.8,.2,1),
+        border-color .28s cubic-bezier(.2,.8,.2,1);
+}
+
+button:hover{
+    transform: scale(1.08);
+    filter: brightness(1.05) saturate(1.05);
+}
+
+legend{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+textarea, input, label, select{
+    width: 100%;
+}
+
+textarea, input, button, select{
+    border-radius: 1rem;
+}
+
+textarea{
+    height: 8rem;
+    resize: none;
+}
+
+input[type = "checkbox"]{
+    width: 0.75rem;
+}

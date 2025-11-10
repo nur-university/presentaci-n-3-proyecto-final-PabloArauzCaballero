@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Producto/servicio de crowdfunding para personas naturales y empresas">
+    <meta property="og:title" content="WeFund (Crowdfunding)">
+    <meta property="og:description" content="Producto/servicio que simplifica el trabajo con esquemas y datos.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png">
+    <meta name="robots" content="index, follow">
+
+    <title>WeFund</title>
+    
+    <link rel="icon" href="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/global_styles.css">
+    <link rel="stylesheet" href="./styles/transitions.css">
+    <link rel="stylesheet" href="./styles/header_styles.css">
+    <link rel="stylesheet" href="./styles/login_signup_styles.css">
+    <link rel="stylesheet" href="./styles/contraller_styles.css">
+    <link rel="stylesheet" href="./styles/footer_styles.css">
+    <link rel="stylesheet" href="./styles/index_styles.css">
+    
+    <script src="https://kit.fontawesome.com/20f2f1746a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+        <header class="base_site_header" role="banner">
+      <nav class="primary-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <details>
+            <summary class = "menu-toggle"><i class="fa-solid fa-house"></i></summary>
+            <li id="soluciones-para-ti" class="primary-nav__item">
+              <details class="primary-nav__details">
+                <summary class="primary-nav__summary">Soluciones para ti</summary>
+                <ul class="primary-nav__submenu">
+                  <li><a href="./root_personas_naturales.html">Campaña WeHelp</a></li>
+                  <li><a href="./root_personas_naturales.html">Campaña FundMyDream</a></li>
+                  <li><a href="./root_personas_naturales.html">Campaña WeSeed</a></li>
+                </ul>
+              </details>
+            </li>
+            <li id="soluciones-para-empresa" class="primary-nav__item">
+              <details class="primary-nav__details">
+                <summary class="primary-nav__summary">Soluciones para tu empresa</summary>
+                <ul class="primary-nav__submenu">
+                  <li><a href="./root_personas_naturales.html">Campaña BoostMyProject</a></li>
+                  <li><a href="./root_personas_naturales.html">Campaña FundMyLaunch</a></li>
+                  <li><a href="./root_personas_naturales.html">Campaña WeBuild</a></li>
+                  <li><a href="./root_personas_naturales.html">Campaña WeBack</a></li>
+                </ul>
+              </details>
+            </li>
+
+            <li id="Sobre nosotros" class = "primary-nav__item">
+              <details class = "primary-nav__details">
+                <summary class="primary-nav__summary">Sobre nosotros</summary>
+                <ul class = "primary-nav__submenu">
+                  <li><a href = "#our_philosophy">Nuestra misión y visión</a></li>
+                  <li><a href = "./root_personas_naturales.html">Nuestros valores</a></li>
+                  <li><a href = "./root_personas_naturales.html">Información de contacto</a></li>
+                </ul>
+              </details>
+            </li>
+          </details>
+        </ul> 
+      </nav>
+      <nav class="primary-nav-web-view" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li class="primary-nav__item logo-icon-header">
+            <img src = "./styles/img/FUNDING.png">  
+          </li>
+          <li id="soluciones-para-ti" class="primary-nav__item">
+            <details class="primary-nav__details transition_scaling_general">
+              <summary class="primary-nav__summary">Soluciones para ti</summary>
+              <ul class="primary-nav__submenu">
+                <li><a href="./root_personas_naturales.html">Campaña WeHelp</a></li>
+                <li><a href="./root_personas_naturales.html">Campaña FundMyDream</a></li>
+                <li><a href="./root_personas_naturales.html">Campaña WeSeed</a></li>
+              </ul>
+            </details>
+          </li>
+                    
+          <li id="soluciones-para-empresa" class="primary-nav__item">
+            <details class="primary-nav__details">
+              <summary class="primary-nav__summary transition_scaling_general">Soluciones para tu empresa</summary>
+              <ul class="primary-nav__submenu">
+                <li><a href="./root_personas_naturales.html">Campaña BoostMyProject</a></li>
+                <li><a href="./root_personas_naturales.html">Campaña FundMyLaunch</a></li>
+                <li><a href="./root_personas_naturales.html">Campaña WeBuild</a></li>
+                <li><a href="./root_personas_naturales.html">Campaña WeBack</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <li id="Sobre nosotros" class = "primary-nav__item">
+            <details class = "primary-nav__details">
+              <summary class="primary-nav__summary transition_scaling_general">Sobre nosotros</summary>
+              <ul class = "primary-nav__submenu">
+                <li><a href = "#our_philosophy">Nuestra misión y visión</a></li>
+                <li><a href = "./root_personas_naturales.html">Nuestros valores</a></li>
+                <li><a href = "./root_personas_naturales.html">Información de contacto</a></li>
+              </ul>
+            </details>
+          </li>
+        </details>
+      </nav>
+    </header>
+    <main>
+      <article id ="WeHelp" class = "general_header">
+        <div>
+          <h2>Campaña WeHelp</h2>
+          <h3>Ayudamos al que más necesita</h3>
+          <p>
+            Campaña WeHelp es la modalidad de WeFund pensada para <strong>apoyar causas urgentes de personas y 
+            familias</strong> (salud, educación, emergencias). Permite crear en minutos una página con meta y evidencias, 
+            recibir donaciones seguras y publicar actualizaciones para mantener la confianza. La forma más simple y 
+            transparente de <strong>activar solidaridad inmediata en la comunidad</strong>.
+          </p>
+        </div>
+        <div class = "we_help-img_container">
+          <img class = "cutted_images" src = "./styles/img/pexels-liza-summer-6348119.jpg">
+        </div>
+      </article>
+      <article id ="WeFund" class = "general_header">
+        <div class = "we_fund-img_container">
+          <img src = "./styles/img/istock-637692094.jpeg">
+        </div>
+        <div>
+          <h2>Campaña WeFund</h2>
+          <h3>Te ayudamos a que puedas cumplir tus sueños</h3>
+          <p>
+              FundMyDream es la modalidad de WeFund para financiar el <strong>activo de tus sueños</strong>: 
+              desde una PlayStation o una bici, hasta auto o casa. Publica tu meta y plan de compra, 
+              sube <strong>cotizaciones, define hitos de ahorro</strong>, y recibe aportes únicos o recurrentes de tu 
+              comunidad con total transparencia. <strong>Incluye actualizaciones y recompensas</strong> opcionales para 
+              mostrar avances y convertir apoyo en patrimonio real.            
+          </p>
+        </div>
+      </article>
+      <article id ="WeSeed" class = "general_header">
+        <div>
+          <h2>Campaña WeSeed</h2>
+          <h3>Te ayudamos a construir tu negocio</h3>
+          <p>
+            WeSeed es la modalidad de WeFund para <strong>emprendedores con proyectos concretos</strong> (MVP, prototipo o piloto). 
+            Crea tu pitch público con objetivo, <strong>presupuesto y hitos, sube evidencias (demo, tracción)</strong> y recibe 
+            aportes tipo preventa o recompensas. Los <strong>fondos pueden liberarse por etapas según hitos cumplidos</strong>, 
+            con seguimiento y actualizaciones que dan confianza. Ideal para <strong>validar mercado, iniciar producción 
+            y escalar con tu comunidad</strong>.            
+            </p>
+          </div>
+          <div class = "we_seed-img_container">
+            <img src = "./styles/img/pexels-kunitsky-210990.jpg">
+          </div>
+      </article>
+
+      <article id ="BoostMyProject" class = "general_header">
+        <div class = "boost_my_project-img_container">
+          <img src = "./styles/img/pexels-fauxels-3183186.jpg">
+        </div>
+        <div>
+          <h2>Campaña BoostMyProject</h2>
+          <h3>Impulsamos tus proyectos</h3>
+          <p>
+            BoostMyProject es un tipo de campaña de crowdfunding orientada a <strong>objetivos empresariales precisos</strong>: 
+            adquirir maquinaria, abrir una nueva sede, lanzar una línea de producto, certificar procesos o 
+            escalar operaciones. Presentas tu plan, presupuesto y plazos, activas a tu comunidad (clientes, 
+            proveedores, fans) y recaudas capital mediante pequeñas aportaciones con recompensas, preventa o 
+            beneficios exclusivos. Es la vía más ágil para financiar un hito, validar demanda y acelerar el 
+            crecimiento sin endeudarte ni ceder control, con transparencia y métricas de avance.       
+          </p>
+        </div>
+      </article>
+
+      <article id ="FundMyLaunch" class = "general_header">
+        <div>
+          <h2>Campaña FundMyLauch</h2>
+          <h3>Propulsamos tus avances</h3>
+          <p>
+              FundMyLaunch es un tipo de campaña de crowdfunding diseñado para lanzamientos de 
+              nuevos productos. Presentas tu MVP/prototipo, explicas el plan de producción, costos 
+              y fechas de entrega, y activas a tu comunidad para reservas anticipadas (preventa) 
+              con recompensas por tramos. Así valídas demanda y precio, financias el primer lote 
+              sin deuda ni equity, y recoges feedback real de tus early adopters para afinar tu 
+              go-to-market.
+          </p>
+        </div>
+        <div class = "fund_my_launch-img_container">
+          <img src = "./styles/img/20180404151451-HED-Launch-MaryDelaney-TheOracles.webp">
+        </div>
+      </article>
+
+      <article id ="WeBuild" class = "general_header">
+        <div class = "we_build-img_container">
+          <img src = "./styles/img/AdobeStock_448692407-scaled-1.jpg">
+        </div>
+        <div>
+          <h2>Campaña WeBuild</h2>
+          <h3>Apoyamos a las promesas</h3>
+          <p>
+            WeBuild es un tipo de campaña de crowdfunding diseñado para startups en etapa temprana 
+            con alto potencial. Presentas tu MVP/prototipo, el roadmap (MVP → beta → PMF), presupuesto 
+            y fechas, activas a tu comunidad de early adopters y recaudas capital mediante aportes a 
+            cambio de beneficios concretos: acceso anticipado, planes “lifetime”, créditos de uso, 
+            upgrades y una edición Founders. Con métricas de avance (usuarios, MRR, retención) y 
+            comunicación transparente, validas mercado, financias desarrollo e infraestructura y 
+            aceleras tu go-to-market sin endeudarte ni ceder control.
+          </p>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <article>
+        <h1>Contacta con nosotros</h1>
+        <ul>
+          <li id = "telf">(+591) 77377232</li>
+          <li id = "correo">informaciones@wefund.com</li>
+          <li id = "perfil_facebook">https://WeFund.facebook.com</li>
+          <li id = "oficina">Mnz. 40 Torre 2, piso 21, Santa Cruz de la Sierra</li>
+        </ul>
+      </article>
+
+      <article id>
+        <h1>Información</h1>
+        <ul>
+          <li id = "mision"><a href = "./index.html#what_is_a_campaign">¿Qué es una campaña?</a></li>
+          <li id = "vision"><a href= "./index.html#our_services">¿Qué puedes encontrar en WeFund?</a></li>
+          <li id = "tipos_campana"><a href= "./campaign_info.html">Tipos de campañas</a></li>
+        </ul>
+      </article>
+
+      <div class="final_footer">
+        <p>Sitio desarrollo por Pablo Arauz Caballero</p>
+        <p>@2025 FundMe Co.</p>
+        <div>
+          <a href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Privacidad</a>
+          <a href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Terminos y condiciones</a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

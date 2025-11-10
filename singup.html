@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Producto/servicio de crowdfunding para personas naturales y empresas">
+        <meta property="og:title" content="WeFund (Crowdfunding)">
+        <meta property="og:description" content="Producto/servicio que simplifica el trabajo con esquemas y datos.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png">
+        <meta name="robots" content="index, follow">
+        <title>WeFund</title>
+        <link rel="icon" href="https://PabloArauzCaballero.github.io/Proyecto-final-Ingenier-a-web-I/FUNDING.png" type="image/x-icon">
+        
+        <link rel="stylesheet" href="./styles/global_styles.css">
+        <link rel="stylesheet" href="./styles/transitions.css">
+        <link rel="stylesheet" href="./styles/header_styles.css">
+        <link rel="stylesheet" href="./styles/login_signup_styles.css">
+        <link rel="stylesheet" href="./styles/contraller_styles.css">
+        <link rel="stylesheet" href="./styles/footer_styles.css">
+
+        <script src="https://kit.fontawesome.com/20f2f1746a.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <header class="base_site_header" role="banner">
+            <nav class="primary-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <details>
+                        <summary class = "menu-toggle"><i class="fa-solid fa-house"></i></summary>
+                        <li id="soluciones-para-ti" class="primary-nav__item">
+                            <details class="primary-nav__details">
+                                <summary class="primary-nav__summary">Soluciones para ti</summary>
+                                <ul class="primary-nav__submenu">
+                                    <li><a href="./campaign_info.html#WeHelp">Campaña WeHelp</a></li>
+                                    <li><a href="./campaign_info.html#FundMyDream">Campaña FundMyDream</a></li>
+                                    <li><a href="./campaign_info.html#WeSeed">Campaña WeSeed</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li id="soluciones-para-empresa" class="primary-nav__item">
+                            <details class="primary-nav__details">
+                                <summary class="primary-nav__summary">Soluciones para tu empresa</summary>
+                                <ul class="primary-nav__submenu">
+                                    <li><a href="./campaign_info.html.html#BoostMyProject">Campaña BoostMyProject</a></li>
+                                    <li><a href="./campaign_info.html#FundMyLaunch">Campaña FundMyLaunch</a></li>
+                                    <li><a href="./campaign_info.html#WeBuild">Campaña WeBuild</a></li>
+                                    <li><a href="./campaign_info.html#WeBack">Campaña WeBack</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li id="Sobre nosotros" class = "primary-nav__item">
+                            <details class = "primary-nav__details">
+                                <summary class="primary-nav__summary">Sobre nosotros</summary>
+                                <ul class = "primary-nav__submenu">
+                                    <li><a href = "#our_philosophy">Nuestra misión y visión</a></li>
+                                    <li><a href = "#contact_us">Información de contacto</a></li>
+                                    <li><a href = "./root_personas_naturales.html">Revisar campañas</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </details>
+                </ul> 
+            </nav>
+            <nav class="primary-nav-web-view" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li class="primary-nav__item logo-icon-header">
+                        <img src = "./styles/img/FUNDING.png">  
+                    </li>
+                    <li id="soluciones-para-ti" class="primary-nav__item">
+                        <details class="primary-nav__details transition_scaling_general">
+                        <summary class="primary-nav__summary">Soluciones para ti</summary>
+                        <ul class="primary-nav__submenu">
+                            <li><a href="./campaign_info.html#WeHelp">Campaña WeHelp</a></li>
+                            <li><a href="./campaign_info.html#FundMyDream">Campaña FundMyDream</a></li>
+                            <li><a href="./campaign_info.html#WeSeed">Campaña WeSeed</a></li>
+                        </ul>
+                        </details>
+                    </li>
+                            
+                    <li id="soluciones-para-empresa" class="primary-nav__item">
+                        <details class="primary-nav__details">
+                        <summary class="primary-nav__summary transition_scaling_general">Soluciones para tu empresa</summary>
+                        <ul class="primary-nav__submenu">
+                            <li><a href="./campaign_info.html#BoostMyProject">Campaña BoostMyProject</a></li>
+                            <li><a href="./campaign_info.html#FundMyLaunch">Campaña FundMyLaunch</a></li>
+                            <li><a href="./campaign_info.html#WeBuild">Campaña WeBuild</a></li>
+                            <li><a href="./campaign_info.html#WeBack">Campaña WeBack</a></li>
+                        </ul>
+                        </details>
+                    </li>
+
+                    <li id="Sobre nosotros" class = "primary-nav__item">
+                        <details class = "primary-nav__details">
+                        <summary class="primary-nav__summary transition_scaling_general">Sobre nosotros</summary>
+                        <ul class = "primary-nav__submenu">
+                            <li><a href = "#our_philosophy">Nuestra misión y visión</a></li>
+                            <li><a href = "#contact_us">Información de contacto</a></li>
+                            <li><a href = "./root_personas_naturales.html">Revisar campañas</a></li>
+                        </ul>
+                        </details>
+                    </li>
+                </details>
+            </nav>
+        </header>
+
+        <div class = "image_banner_signup">
+            <img class = "transition_scaling_general" id = "we_fund_logo" src = "./styles/img/FUNDING.png">  
+        </div>
+
+        <aside class = "login_container">
+            <form id = "login_form">
+                <legend>Iniciar sesión</legend>
+                <div>
+                    <label for = "correo">Correo:</label>
+                    <input name =  "correo" id = "correo" type="email" placeholder="Ingrese correo">
+                </div>
+                <div>
+                    <label for = "nombre_usuario">Nombre usuario:</label>
+                    <input name =  "nombre_usuario" id = "nombre_usuario" type="text" placeholder="Ingrese correo">
+                </div>
+                <div>
+                    <label for = "contrasena">Contraseña:</label>
+                    <input name =  "contrasena" id = "contrasena" type="password" placeholder="Ingrese contraseña">
+                </div>
+                <div>
+                    <label for = "contrasena">Contraseña (confirmación):</label>
+                    <input name =  "contrasena_confirmacion" id = "contrasena" type="password" placeholder="Ingrese contraseña (confirmación)">
+                </div>
+                <div>
+                    <label for = "pais">País:</label>
+                    <select id = "pais" name = "pais">
+                        <option value="" selected disabled hidden>Selecciona un país…</option>
+
+                        <option value="AF">Afganistán</option>
+                        <option value="AL">Albania</option>
+                        <option value="DE">Alemania</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AG">Antigua y Barbuda</option>
+                        <option value="SA">Arabia Saudita</option>
+                        <option value="DZ">Argelia</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaiyán</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BH">Baréin</option>
+                        <option value="BE">Bélgica</option>
+                        <option value="BZ">Belice</option>
+                        <option value="BJ">Benín</option>
+                        <option value="BY">Bielorrusia</option>
+                        <option value="MM">Birmania (Myanmar)</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BA">Bosnia y Herzegovina</option>
+                        <option value="BW">Botsuana</option>
+                        <option value="BR">Brasil</option>
+                        <option value="BN">Brunéi</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="BT">Bután</option>
+                        <option value="CV">Cabo Verde</option>
+                        <option value="KH">Camboya</option>
+                        <option value="CM">Camerún</option>
+                        <option value="CA">Canadá</option>
+                        <option value="QA">Catar</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CY">Chipre</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoras</option>
+                        <option value="KP">Corea del Norte</option>
+                        <option value="KR">Corea del Sur</option>
+                        <option value="CI">Costa de Marfil</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="HR">Croacia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="DK">Dinamarca</option>
+                        <option value="DM">Dominica</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egipto</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="AE">Emiratos Árabes Unidos</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="SK">Eslovaquia</option>
+                        <option value="SI">Eslovenia</option>
+                        <option value="ES">España</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="EE">Estonia</option>
+                        <option value="SZ">Esuatini</option>
+                        <option value="ET">Etiopía</option>
+                        <option value="PH">Filipinas</option>
+                        <option value="FI">Finlandia</option>
+                        <option value="FJ">Fiyi</option>
+                        <option value="FR">Francia</option>
+                        <option value="GA">Gabón</option>
+                        <option value="GM">Gambia</option>
+                        <option value="GE">Georgia</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GD">Granada</option>
+                        <option value="GR">Grecia</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GN">Guinea</option>
+                        <option value="GW">Guinea-Bisáu</option>
+                        <option value="GQ">Guinea Ecuatorial</option>
+                        <option value="GY">Guyana</option>
+                        <option value="HT">Haití</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HU">Hungría</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IQ">Irak</option>
+                        <option value="IR">Irán</option>
+                        <option value="IE">Irlanda</option>
+                        <option value="IS">Islandia</option>
+                        <option value="MH">Islas Marshall</option>
+                        <option value="SB">Islas Salomón</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italia</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japón</option>
+                        <option value="JO">Jordania</option>
+                        <option value="KZ">Kazajistán</option>
+                        <option value="KE">Kenia</option>
+                        <option value="KG">Kirguistán</option>
+                        <option value="KI">Kiribati</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="LA">Laos</option>
+                        <option value="LS">Lesoto</option>
+                        <option value="LV">Letonia</option>
+                        <option value="LB">Líbano</option>
+                        <option value="LR">Liberia</option>
+                        <option value="LY">Libia</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lituania</option>
+                        <option value="LU">Luxemburgo</option>
+                        <option value="MK">Macedonia del Norte</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MY">Malasia</option>
+                        <option value="MW">Malaui</option>
+                        <option value="MV">Maldivas</option>
+                        <option value="ML">Malí</option>
+                        <option value="MT">Malta</option>
+                        <option value="MA">Marruecos</option>
+                        <option value="MU">Mauricio</option>
+                        <option value="MR">Mauritania</option>
+                        <option value="MX">México</option>
+                        <option value="FM">Micronesia</option>
+                        <option value="MD">Moldavia</option>
+                        <option value="MC">Mónaco</option>
+                        <option value="MN">Mongolia</option>
+                        <option value="ME">Montenegro</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="NA">Namibia</option>
+                        <option value="NR">Nauru</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NE">Níger</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="NO">Noruega</option>
+                        <option value="NZ">Nueva Zelanda</option>
+                        <option value="OM">Omán</option>
+                        <option value="NL">Países Bajos</option>
+                        <option value="PK">Pakistán</option>
+                        <option value="PW">Palaos</option>
+                        <option value="PA">Panamá</option>
+                        <option value="PG">Papúa Nueva Guinea</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Perú</option>
+                        <option value="PL">Polonia</option>
+                        <option value="PT">Portugal</option>
+                        <option value="GB">Reino Unido</option>
+                        <option value="CF">República Centroafricana</option>
+                        <option value="CZ">Chequia (República Checa)</option>
+                        <option value="CG">República del Congo</option>
+                        <option value="CD">República Democrática del Congo</option>
+                        <option value="DO">República Dominicana</option>
+                        <option value="RW">Ruanda</option>
+                        <option value="RO">Rumanía</option>
+                        <option value="RU">Rusia</option>
+                        <option value="WS">Samoa</option>
+                        <option value="KN">San Cristóbal y Nieves</option>
+                        <option value="SM">San Marino</option>
+                        <option value="VC">San Vicente y las Granadinas</option>
+                        <option value="LC">Santa Lucía</option>
+                        <option value="ST">Santo Tomé y Príncipe</option>
+                        <option value="SN">Senegal</option>
+                        <option value="RS">Serbia</option>
+                        <option value="SC">Seychelles</option>
+                        <option value="SL">Sierra Leona</option>
+                        <option value="SG">Singapur</option>
+                        <option value="SY">Siria</option>
+                        <option value="SO">Somalia</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="ZA">Sudáfrica</option>
+                        <option value="SD">Sudán</option>
+                        <option value="SS">Sudán del Sur</option>
+                        <option value="SE">Suecia</option>
+                        <option value="CH">Suiza</option>
+                        <option value="SR">Surinam</option>
+                        <option value="TH">Tailandia</option>
+                        <option value="TW">Taiwán</option>
+                        <option value="TZ">Tanzania</option>
+                        <option value="TJ">Tayikistán</option>
+                        <option value="TL">Timor Oriental</option>
+                        <option value="TG">Togo</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trinidad y Tobago</option>
+                        <option value="TN">Túnez</option>
+                        <option value="TM">Turkmenistán</option>
+                        <option value="TR">Turquía</option>
+                        <option value="TV">Tuvalu</option>
+                        <option value="UA">Ucrania</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="UZ">Uzbekistán</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VA">Ciudad del Vaticano</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="YE">Yemen</option>
+                        <option value="DJ">Yibuti</option>
+                        <option value="ZM">Zambia</option>
+                        <option value="ZW">Zimbabue</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for = "telf">Teléfono:</label>
+                    <input name =  "telf" id = "telf" type="text" placeholder="Ingrese teléfono">
+                </div>
+
+                <div class = "button_div">
+                    <button class = "transition_scaling_general" type = "button">Ingresar</button>
+                </div>
+            </form>
+            <div class = "conditions">
+                <input name = "acepta_terminos_condiciones" type="checkbox">
+                <p>Acepto los</p>
+                <a href = "root_personas_naturales.html">términos y condiciones</a>
+            </div>
+        </aside>
+        <footer>
+            <article>
+                <h1>Contacta con nosotros</h1>
+                <ul>
+                    <li id = "telf">(+591) 77377232</li>
+                    <li id = "correo">informaciones@wefund.com</li>
+                    <li id = "perfil_facebook">https://WeFund.facebook.com</li>
+                    <li id = "oficina">Mnz. 40 Torre 2, piso 21, Santa Cruz de la Sierra</li>
+                </ul>
+            </article>
+
+            <article>
+                <h1>Información</h1>
+                <ul>
+                    <li class = "transition_scaling_general" id = "mision"><a href = "index.html">¿Qué es una campaña?</a></li>
+                    <li class = "transition_scaling_general" id = "vision"><a href= "index.html">¿Qué puedes encontrar en WeFund?</a></li>
+                    <li class = "transition_scaling_general" id = "tipos_campana"><a href= "index.html">Tipos de campañas</a></li>
+                </ul>
+            </article>
+
+            <div class="final_footer">
+                <p>Sitio desarrollo por Pablo Arauz Caballero</p>
+                <p>@2025 FundMe Co.</p>
+                <div>
+                    <a class = "transition_scaling_general" href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Privacidad</a>
+                    <a class = "transition_scaling_general" href="C:\Users\DELL\Downloads\TRABAJO FINAL\root_personas_naturales.html">Terminos y condiciones</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
